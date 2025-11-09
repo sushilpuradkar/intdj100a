@@ -1,2 +1,25 @@
 This is the change for 11/9
-fhihduighuidhg
+
+Github processes :
+The sequence of Git commands git pull, git add, git status, git commit, and git pull represents a common workflow for updating a local repository, making changes, and then pushing those changes to a remote repository. 
+git pull: This command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. It effectively combines git fetch (to retrieve changes) and git merge (to integrate those changes into your current local branch). This ensures your local working directory is up-to-date before you start making changes.
+Code
+
+    git pull
+git add: After making modifications to files in your local working directory, this command adds those changes to the Git staging area (also known as the index). The staging area is where you prepare changes for the next commit. You can add specific files or all modified/new files.
+Code
+
+    git add . # Adds all modified and new files in the current directory and subdirectories
+    git add <filename> # Adds a specific file
+git status: This command displays the state of the working directory and the staging area. It shows which changes have been staged, which haven't, and which files are untracked. This helps you review your changes before committing. 
+Code
+
+    git status
+git commit: This command saves the changes currently in the staging area to the Git repository, creating a new commit in the project's history. Each commit represents a "safe" version of your project and should be accompanied by a descriptive commit message.
+Code
+
+    git commit -m "Descriptive commit message"
+git pull: After committing your changes locally, it's good practice to perform another git pull before pushing. This ensures that if any new changes were pushed to the remote repository while you were working on your local changes, you integrate them before pushing your own. This helps avoid merge conflicts when pushing.
+Code
+
+    git pull
